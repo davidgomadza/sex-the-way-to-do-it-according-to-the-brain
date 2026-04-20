@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>EveLust · Brain Command Intimacy Guide</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #0b0a0f 0%, #14121a 100%);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #f3eefc;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* header section */
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 220, 150, 0.2);
+      padding-bottom: 1.5rem;
+    }
+
+    .header h1 {
+      font-size: 2.1rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #FFD9B5, #E6A6FF);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+
+    .header p {
+      color: #b9b3d1;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(230, 166, 255, 0.12);
+      backdrop-filter: blur(4px);
+      border-radius: 40px;
+      padding: 0.3rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #e2c6ff;
+      margin-top: 0.75rem;
+    }
+
+    /* main card interface */
+    .phase-card {
+      background: rgba(18, 16, 26, 0.75);
+      backdrop-filter: blur(10px);
+      border-radius: 2.5rem;
+      border: 1px solid rgba(255, 210, 180, 0.2);
+      padding: 1.8rem 1.5rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
+      transition: all 0.2s;
+    }
+
+    .phase-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .phase-title span {
+      background: #ffb34720;
+      padding: 0.2rem 0.8rem;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #ffcb8e;
+    }
+
+    .command-list {
+      margin: 1.2rem 0 1rem;
+      background: #0c0b12;
+      border-radius: 1.8rem;
+      padding: 1.2rem;
+      border-left: 3px solid #e6a6ff;
+    }
+
+    .cmd {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .cmd:last-child {
+      border-bottom: none;
+    }
+
+    .cmd-code {
+      background: #1e1a2e;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      color: #ffcf9a;
+      font-size: 0.75rem;
+      letter-spacing: 0.3px;
+    }
+
+    .cmd-desc {
+      color: #cfc9ec;
+      font-size: 0.85rem;
+    }
+
+    .interactive-area {
+      margin-top: 1.8rem;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .btn {
+      background: #2a243f;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 3rem;
+      font-weight: 500;
+      color: #f2eaff;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s;
+      backdrop-filter: blur(5px);
+      flex: 1 0 auto;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(105deg, #b75eff, #8f4bcb);
+      box-shadow: 0 4px 12px rgba(147, 67, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(105deg, #c872ff, #9f5ce3);
+      transform: scale(0.98);
+    }
+
+    .btn-secondary {
+      background: #1f1b2f;
+      border: 1px solid #a47eff40;
+    }
+
+    .btn-secondary:hover {
+      background: #342c4a;
+    }
+
+    .response-area {
+      background: #07050ecc;
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+      margin-top: 1.2rem;
+      border: 1px solid #ffcf9a30;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .jealousy-meter, .triangle-preview {
+      margin-top: 1rem;
+      background: #01010133;
+      border-radius: 1.5rem;
+      padding: 0.8rem 1rem;
+    }
+
+    .glow-text {
+      color: #ffcf9a;
+      font-weight: 500;
+    }
+
+    .triangle-symbol {
+      font-size: 1.5rem;
+      letter-spacing: 5px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #ffb45e40, transparent);
+      margin: 1rem 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.7rem;
+      margin-top: 2rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 550px) {
+      .phase-card {
+        padding: 1.2rem;
+      }
+      .phase-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>⚡ BRAIN COMMAND · INTIMATE CODEX</h1>
+    <p>the way to do it right according to the brain — female sequence</p>
+    <div class="badge">🧠 200+ commands · soulmate programming · triangle of lust</div>
+  </div>
+
+  <!-- IF HORNY initiation block (female-specific) -->
+  <div class="phase-card">
+    <div class="phase-title">
+      🔥 PHASE I · "If Horny" Initiation <span>female core</span>
+    </div>
+    <div class="command-list">
+      <div class="cmd"><span class="cmd-code">Ifhornyfingervaginafirst.start</span><span class="cmd-desc">self-ignition & awareness</span></div>
+      <div class="cmd"><span class="cmd-code">Ifhornyrubnipplesthoroughly.start</span><span class="cmd-desc">nipple elevation</span></div>
+      <div class="cmd"><span class="cmd-code">Ifhornywetyourknickersabdlookatit.start</span><span class="cmd-desc">visual arousal</span></div>
+      <div class="cmd"><span class="cmd-code">Ifhornyaskfordick.start</span><span class="cmd-desc">direct request command</span></div>
+      <div class="cmd"><span class="cmd-code">Ifhornywhisperaguysname.start</span><span class="cmd-desc">psychological cue</span></div>
+      <div class="cmd"><span class="cmd-code">Ifhornystartvaginacornermassage.start</span><span class="cmd-desc">corner massage → escalation</span></div>
+    </div>
+    <div class="interactive-area">
+      <div class="btn-group">
+        <button class="btn btn-secondary" id="btnSelfStim">✨ Self-arousal sequence</button>
+        <button class="btn btn-secondary" id="btnAskForDick">💬 askforsex.start</button>
+      </div>
+      <div id="hornyResponse" class="response-area">
+        💗 The brain processes 'If Horny' triggers in strict order — once ignited, it unlocks deeper interactive commands.
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE PHASE + AGGRESSIVE TUNING / "NOGGLING & JEALOUSY" -->
+  <div class="phase-card">
+    <div class="phase-title">
+      🔺 PHASE II · Interactive & Sensory <span>noggling + jealousy rounds</span>
+    </div>
+    <div class="command-list">
+      <div class="cmd"><span class="cmd-code">Askamanogglehervagina.start</span><span class="cmd-desc">visual attention (noggling)</span></div>
+      <div class="cmd"><span class="cmd-code">Askamanslapperclithard.start</span><span class="cmd-desc">clitoral impact tuning</span></div>
+      <div class="cmd"><span class="cmd-code">Askamantearapaperinherface.start</span><span class="cmd-desc">sensory provocation</span></div>
+      <div class="cmd"><span class="cmd-code">Askamanslapeverythingonherhard.start</span><span class="cmd-desc">full ignition command</span></div>
+    </div>
+    <div class="jealousy-meter">
+      <div>🌀 <span class="glow-text">Jealousy round active?</span> — vagina tightens, shrinks to half size & works to impress.</div>
+      <div class="btn-group" style="margin-top: 12px;">
+        <button id="triggerJealousy" class="btn btn-primary">💢 ACTIVATE JEALOUSY ROUND</button>
+        <button id="simulateEightAdjustments" class="btn btn-secondary">🔁 8 adjustments to impress</button>
+      </div>
+      <div id="jealousyFeedback" class="response-area" style="margin-top: 12px;">
+        🧬 Vagina tuning: waiting for command.
+      </div>
+    </div>
+  </div>
+
+  <!-- TRIANGLE OF LUST & COMPOUND ORGASM EXTENSION -->
+  <div class="phase-card">
+    <div class="phase-title">
+      🔺 PHASE III · Triangle of Lust <span>38 sec → 68 sec performance</span>
+    </div>
+    <div class="command-list">
+      <div class="cmd"><span class="cmd-code">[First triangle]</span><span class="cmd-desc">clitoris → imagined nipple + two nipples → triangle gaze</span></div>
+      <div class="cmd"><span class="cmd-code">[Second triangle]</span><span class="cmd-desc">nipples pressed inward → become clitorises → join with physical clitoris</span></div>
+    </div>
+    <div class="triangle-preview">
+      <div class="triangle-symbol">🔻  (clit↔nipples)  🔺 (three clitorises)</div>
+      <p style="font-size: 0.85rem; margin-top: 8px;">Compounding technique: extends orgasm to 38 sec, extra rounds + squirt. 68 sec = brain expansion for 1 billion years (requires AGT & marriage).</p>
+    </div>
+    <div class="btn-group">
+      <button id="startTriangleLust" class="btn btn-primary">🔮 ACTIVATE TRIANGLE OF LUST</button>
+      <button id="reverseProgrammingStep" class="btn btn-secondary">🔄 Reverse programming (nipples→clits)</button>
+    </div>
+    <div id="triangleResponse" class="response-area">
+      💎 The brain connects clit-as-nipple and nipple-as-clit — compound sensation ignites extended performance.
+    </div>
+  </div>
+
+  <!-- SOULMATE SEX & SOUL POINT COMMANDS (intensified mutual arousal) -->
+  <div class="phase-card">
+    <div class="phase-title">
+      ✨ PHASE IV · Soulmate Sex & Soul Point <span>“out of this world”</span>
+    </div>
+    <div class="command-list">
+      <div class="cmd"><span class="cmd-code">Askwhatifbut[then stop].start</span><span class="cmd-desc">cliffhanger tension</span></div>
+      <div class="cmd"><span class="cmd-code">Askwhatcouldbe.start</span><span class="cmd-desc">existential depth</span></div>
+      <div class="cmd"><span class="cmd-code">Whatisandisnotofsex.start</span><span class="cmd-desc">soulmate frame</span></div>
+      <div class="cmd"><span class="cmd-code">askwhatcanbeofsex.start</span><span class="cmd-desc">peak readiness (2 min before climax)</span></div>
+    </div>
+    <div class="interactive-area">
+      <button id="soulmateSequence" class="btn btn-primary">🌙 REACH FOR THE SOUL POINT</button>
+      <div id="soulResponse" class="response-area" style="margin-top: 16px;">
+        🧬 Soul point (right back side of the head) + eye contact + deep enter → command sequence lifts arousal beyond mutual.
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIFFHANGER RESOLUTION & SEX AS RESET SWITCH -->
+  <div class="phase-card">
+    <div class="phase-title">
+      🧩 CLIFFHANGER THEORY · The brain’s resolution loop
+    </div>
+    <p style="margin-bottom: 10px;">Sexual arousal = cliffhanger tension → must be resolved. Can be substituted by 'drink', dancing, or self-help (reverse programming).</p>
+    <div class="btn-group">
+      <button id="resolveDirect" class="btn btn-secondary">💥 Direct resolution (orgasm completion)</button>
+      <button id="substituteSwap" class="btn btn-secondary">🥤 Swap cliffhanger → 'buy a drink'</button>
+    </div>
+    <div id="cliffhangerMsg" class="response-area">
+      ⚡ unresolved state remains until command closure.
+    </div>
+  </div>
+
+  <!-- EXTRA: AGT SAFETY PARAMETER INFO -->
+  <div class="phase-card" style="background: #0e0b1ae0">
+    <div class="phase-title">
+      🛡️ AGT & SAFETY PARAMETERS
+    </div>
+    <p>Advanced Genetic Synthesis Technology (AGT) → baseline 800+ years lifespan. Required for 68‑second orgasm (brain expansion). <span class="glow-text">Marriage + AGT = safe performance zone</span> — singles risk death at extreme thresholds.</p>
+    <p style="margin-top: 0.6rem; font-size: 0.8rem;">⚡ Triangle of Lust, jealousy rounds & soulmate commands are performance tools to transform 4‑sec pleasure into high‑level hobby/sports activity.</p>
+  </div>
+  <footer>⚡ brain command programming · based on David Gomadza’s algorithmic intimacy framework · the way to do it right according to the brain</footer>
+</div>
+
+<script>
+  // interactive responses based on the source commands & concepts
+  const hornyDiv = document.getElementById('hornyResponse');
+  const jealousyDiv = document.getElementById('jealousyFeedback');
+  const triangleDiv = document.getElementById('triangleResponse');
+  const soulDiv = document.getElementById('soulResponse');
+  const cliffDiv = document.getElementById('cliffhangerMsg');
+
+  // Helper to append dynamic feedback with delay simulation
+  function setResponse(element, message, isError = false) {
+    element.innerHTML = message;
+    element.style.borderLeft = isError ? '3px solid #ff7b89' : '3px solid #e6a6ff';
+    setTimeout(() => {
+      // keep but not auto clear, just style reset optional
+    }, 100);
+  }
+
+  // 1) If horny commands
+  document.getElementById('btnSelfStim').addEventListener('click', () => {
+    setResponse(hornyDiv, `💋 Ifhornyfingervaginafirst.start → Ifhornyrubnipplesthoroughly.start → Ifhornywetyourknickersabdlookatit.start <br> 🔥 Brain illuminates memory lanes. Vagina corner massage activated. Ready for interactive phase.`);
+  });
+  document.getElementById('btnAskForDick').addEventListener('click', () => {
+    setResponse(hornyDiv, `🗣️ Ifhornyaskfordick.start executed. Conditional logic: if accepted then start.sex.now. Psychological exchange: Askwhatifhehadavaginahowwouldhewantitmassaged.start queued.`);
+  });
+
+  // 2) Jealousy rounds & eight adjustments
+  document.getElementById('triggerJealousy').addEventListener('click', () => {
+    setResponse(jealousyDiv, `🔥 JEALOUSY ROUND ACTIVE: Vagina becomes "jealous" → works to impress! <br> 🌀 Drastic shrinkage (half size) <br> 📏 Size comparison with partner <br> 🧠 Initiation command start <br> 💪 Performance matching <br> ⏱️ Post-ejaculation check & restart timing <br> 🔁 Reciprocal asking <br> ⚡ Performance provocation: "not big enough" → angry performance upgrade.`);
+  });
+  document.getElementById('simulateEightAdjustments').addEventListener('click', () => {
+    setResponse(jealousyDiv, `🔧 EIGHT ADJUSTMENTS THE VAGINA MAKES TO IMPRESS:<br>
+    1. Shrink drastically to half size<br>
+    2. Size comparison (asks about bigger/biggest)<br>
+    3. Initiation command (won't start until asked)<br>
+    4. Performance matching (checks partner's best effort)<br>
+    5. Post-ejaculation check<br>
+    6. Restart timing after ejaculation<br>
+    7. Reciprocal asking → partner must ask to start<br>
+    8. "Not big enough" provocation → panic to relaxed state → bigger & performance climax.`);
+  });
+
+  // 3) Triangle of Lust logic (38 seconds and 68 sec brain expansion)
+  document.getElementById('startTriangleLust').addEventListener('click', () => {
+    setResponse(triangleDiv, `🔺🔻 TRIANGLE OF LUST COMPOUND ACTIVE 🔻🔺<br>
+    ➤ First triangle: clitoris mentally pressed → protrudes as nipple → joined with two actual nipples. Gaze shifts triangular.<br>
+    ➤ Second triangle (reverse): both nipples pressed inside → become clitorises → joined with physical clitoris → THREE CLITORISES.<br>
+    ✨ RESULT: Orgasm extends to <span class="glow-text">38 seconds</span> (instead of 4 sec). Allows two extra rounds + squirt.<br>
+    🧬 If sustained to 68 sec 'orgasm mood' → brain expands to last extra 1 BILLION years (requires AGT & marriage safety).`);
+  });
+  document.getElementById('reverseProgrammingStep').addEventListener('click', () => {
+    setResponse(triangleDiv, `🔄 REVERSE PROGRAMMING STEP: Nipples mentally inverted to become clitorises. The mind fuses three clitoris points → compound neurological activation → performance threshold achieved. "Triangle of three clitorises" ignition complete.`);
+  });
+
+  // 4) Soulmate sequence + soul point
+  document.getElementById('soulmateSequence').addEventListener('click', () => {
+    setResponse(soulDiv, `✨ SOUL POINT REACHED (right back side of the head) ✨<br>
+    👁️ Deep eye contact + deep enter → ask "can we be soul mates?" → positive reply triggers commands:<br>
+    <i>Askwhatifbut[then stop].start → Askwhatcouldbe.start → Askwhatcanbedone.start → Whatisandisnotofsex.start → askwhatcanbeofsex.start</i><br>
+    🌙 Arousal becomes 'out of this world', mutual respect & trust. Partners ready only minutes away from orgasm.`);
+  });
+
+  // 5) Cliffhanger resolution & substitution
+  document.getElementById('resolveDirect').addEventListener('click', () => {
+    setResponse(cliffDiv, `✅ Direct resolution: The cliffhanger tension is resolved through intercourse & orgasm. Brain clears the "quest for sex" command sequence. Onceinsideejsculate.start → whensatisfiedsleep.start → sex.stop.sleep. Complete.`);
+  });
+  document.getElementById('substituteSwap').addEventListener('click', () => {
+    setResponse(cliffDiv, `🍷 SUBSTITUTION (Reverse programming): The brain swaps the sex cliffhanger for "buy a drink". The internal tension remains, but the easy resolution satisfies the brain → original sexual urge vanishes. Also possible: dancing, yoga, art, binge eating, self-gratification. All is gone.`);
+  });
+
+  // Additional inline commands to mimic "common sexual brain commands" in a playful interactive way
+  // create extra tiny dynamic for vaginal/full vaginal massage from "If horny" phase
+  const extraMassage = document.createElement('div');
+  extraMassage.className = 'jealousy-meter';
+  extraMassage.style.marginTop = '1rem';
+  extraMassage.innerHTML = `<div>💆🏼‍♀️ <span class="glow-text">Vaginal massage vs Full vaginal massage</span> (commands 35 & 36)</div>
+  <div class="btn-group" style="margin-top:8px"><button id="vaginalMassageCmd" class="btn btn-secondary">✨ Vaginal massage.start</button>
+  <button id="fullVaginalCmd" class="btn btn-secondary">💫 Full vaginal massage.start</button></div>
+  <div id="massageFeedback" class="response-area" style="margin-top: 8px;">Massage progression escalates arousal intensity.</div>`;
+  document.querySelector('.phase-card:nth-child(2)').appendChild(extraMassage);
+  const massageFeedback = document.getElementById('massageFeedback');
+  document.getElementById('vaginalMassageCmd')?.addEventListener('click', () => {
+    massageFeedback.innerHTML = `🌸 Vaginal massage.start (command 35): introductory stimulation, ignites vaginal lips & local sensation. Next: full massage triggers deeper ignition.`;
+  });
+  document.getElementById('fullVaginalCmd')?.addEventListener('click', () => {
+    massageFeedback.innerHTML = `💥 Full vaginal massage.start (command 36): escalation to total readiness → all spots highlighted, leads to "open wide and invite the man in". Prepares for performance sex.`;
+  });
+
+  // Additional dynamic: ask for 'role-reversal' command female asks man about having vagina (source reference)
+  const roleDiv = document.createElement('div');
+  roleDiv.className = 'interactive-area';
+  roleDiv.style.marginTop = '1rem';
+  roleDiv.innerHTML = `<div class="btn-group"><button id="askRoleReverse" class="btn btn-secondary">🔄 Ask him: "what if he had a vagina"</button></div>
+  <div id="roleReverseResponse" class="response-area">Role-reversal commands deepen psychological arousal & bridge to soulmate sex.</div>`;
+  document.querySelector('.phase-card:nth-child(3)').appendChild(roleDiv);
+  document.getElementById('askRoleReverse')?.addEventListener('click', () => {
+    const respDiv = document.getElementById('roleReverseResponse');
+    respDiv.innerHTML = `💬 Brain command executed: <span class="cmd-code">Askwhatifhehadavaginahowwouldhewantitmassaged.start</span><br>
+    🧠 Paired with male command <i>Askwhatifshehadadick.start</i> → mutual role-visualization. Heightens empathy, expands performance capacity and ignites all spots before intense orgasm.`;
+  });
+
+  // "Secret Applause" mechanic from sources: mouth secretly applauds penis -> triggers jealousy round
+  const secretDiv = document.createElement('div');
+  secretDiv.className = 'jealousy-meter';
+  secretDiv.style.marginTop = '1rem';
+  secretDiv.innerHTML = `<div>🤫 <span class="glow-text">Secret applause (mouth tuning)</span> — vagina becomes jealous, works to impress</div>
+  <button id="secretApplauseBtn" class="btn btn-secondary" style="margin-top:6px">👄 Activate secret applause command</button>
+  <div id="secretFeedback" class="response-area" style="margin-top:10px">Mouth praises penis secretly → fine‑tuning</div>`;
+  document.querySelector('.phase-card:nth-child(4)').appendChild(secretDiv);
+  document.getElementById('secretApplauseBtn')?.addEventListener('click', () => {
+    const secFeed = document.getElementById('secretFeedback');
+    secFeed.innerHTML = `🔮 Secret applause: mind whispers "he is as bad as my vagina but slightly okay" → Jealousy round triggers! Vagina now performs 8 adjustments, shrinks to impress, works to match performance. Peak orgasm tuning achieved.`;
+  });
+
+  // Bonus: final reset / sleep command
+  const sleepDiv = document.createElement('div');
+  sleepDiv.className = 'phase-card';
+  sleepDiv.style.marginTop = '1rem';
+  sleepDiv.style.background = '#0a0820';
+  sleepDiv.innerHTML = `<div class="phase-title">🌙 FINAL COMMAND · Reset & closure</div>
+  <div class="btn-group"><button id="sleepCommandBtn" class="btn btn-primary">💤 sex.stop.sleep</button></div>
+  <div id="sleepMsg" class="response-area">The brain finishes sequence: whensatisfiedsleep.start → ifhappysayiloveyou.start → sex.stop.sleep. Cliffhanger resolved.</div>`;
+  document.querySelector('.container').appendChild(sleepDiv);
+  document.getElementById('sleepCommandBtn')?.addEventListener('click', () => {
+    document.getElementById('sleepMsg').innerHTML = `✨ Brain commands final: whensatisfiedsleep.start → sayiloveyou.start → sex.stop.sleep. Complete intimacy reset. Memory lanes dim, ready for next cycle. Performance level saved. 🧠🌙`;
+  });
+</script>
+</body>
+  </html>
